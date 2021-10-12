@@ -1,0 +1,145 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 3,
+    "passes": 3,
+    "pending": 0,
+    "failures": 0,
+    "start": "2021-10-12T00:52:19.431Z",
+    "end": "2021-10-12T00:52:34.768Z",
+    "duration": 15337,
+    "testsRegistered": 3,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "faf9d6b6-4e69-4f39-81db-1f346d3edcde",
+      "title": "",
+      "fullFile": "cypress/integration/cadastrothunders.spec.js",
+      "file": "cypress/integration/cadastrothunders.spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "1c455bc6-181d-4a6e-ac5e-b59a1e61d6d0",
+          "title": "Cadastrar clientes Thunders - Automation Practice",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Dado que esteja na página de cadastro do site Automation Practice",
+              "fullTitle": "Cadastrar clientes Thunders - Automation Practice Dado que esteja na página de cadastro do site Automation Practice",
+              "timedOut": null,
+              "duration": 6526,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit('http://automationpractice.com/index.php');\ncy.get('.login').click();\ncy.get('#SubmitCreate').should('exist');\ncy.get('#email_create').type(chance.email());\ncy.get('#SubmitCreate').click();\ncy.url().should('contain', 'account-creation');",
+              "err": {},
+              "uuid": "f4060fdf-596a-4d9c-8b10-49ede97cefa9",
+              "parentUUID": "1c455bc6-181d-4a6e-ac5e-b59a1e61d6d0",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Quando preencher todos os campos obrigatórios e corretamente",
+              "fullTitle": "Cadastrar clientes Thunders - Automation Practice Quando preencher todos os campos obrigatórios e corretamente",
+              "timedOut": null,
+              "duration": 6284,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.get('[type=\"radio\"]').first().check();\ncy.get('input[name=customer_firstname]').type(chance.first());\ncy.get('input[name=customer_lastname]').type(chance.last());\ncy.get('#email').clear();\ncy.get('#email').type(chance.email());\ncy.get('input[name=passwd]').type('12345');\ncy.get('select#days').select('3', {\n  force: true\n});\ncy.get('select#months').select('June', {\n  force: true\n});\ncy.get('select#years').select('1987', {\n  force: true\n});\ncy.get('input[name=company]').type('Samuca LTDA');\ncy.get('input[name=address1]').type(chance.address());\ncy.get('input[name=city]').type(chance.city());\ncy.get('select#id_state').select('Alabama', {\n  force: true\n});\ncy.get('input[name=postcode]').type(chance.zip({\n  plustwo: true\n}));\ncy.get('#other').type('My phone number is +55 11 9.9898.9989');\ncy.get('#phone_mobile').type(chance.phone({\n  country: \"br\",\n  mobile: true\n}));\ncy.get('input[name=alias]').clear();\ncy.get('input[name=alias]').type('example');\ncy.get('#submitAccount').click();",
+              "err": {},
+              "uuid": "ca83d9ea-e5c1-4d37-b906-01297a2ddaf4",
+              "parentUUID": "1c455bc6-181d-4a6e-ac5e-b59a1e61d6d0",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Então o cadastro deverá ser realizado com sucesso",
+              "fullTitle": "Cadastrar clientes Thunders - Automation Practice Então o cadastro deverá ser realizado com sucesso",
+              "timedOut": null,
+              "duration": 26,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.get('.logout').should('exist');",
+              "err": {},
+              "uuid": "fb1dd1e7-3c71-4fa0-9b13-fa1ea20dc2d3",
+              "parentUUID": "1c455bc6-181d-4a6e-ac5e-b59a1e61d6d0",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "f4060fdf-596a-4d9c-8b10-49ede97cefa9",
+            "ca83d9ea-e5c1-4d37-b906-01297a2ddaf4",
+            "fb1dd1e7-3c71-4fa0-9b13-fa1ea20dc2d3"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 12836,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": true,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "6.3.1"
+    },
+    "marge": {
+      "options": {
+        "id": "default",
+        "reportDir": "mochawesome-report",
+        "quiet": true,
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "5.2.0"
+    }
+  }
+}
