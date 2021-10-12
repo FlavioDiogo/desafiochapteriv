@@ -5,9 +5,9 @@
     "passes": 3,
     "pending": 0,
     "failures": 0,
-    "start": "2021-10-12T17:26:50.947Z",
-    "end": "2021-10-12T17:27:06.775Z",
-    "duration": 15828,
+    "start": "2021-10-12T17:48:03.506Z",
+    "end": "2021-10-12T17:48:22.784Z",
+    "duration": 19278,
     "testsRegistered": 3,
     "passPercent": 100,
     "pendingPercent": 0,
@@ -18,7 +18,7 @@
   },
   "results": [
     {
-      "uuid": "e6c08e42-6065-404a-bce8-25becd2637fb",
+      "uuid": "3b86d79e-92d2-40ef-b395-a5fcc488a33e",
       "title": "",
       "fullFile": "cypress/integration/cadastrothunders.spec.js",
       "file": "cypress/integration/cadastrothunders.spec.js",
@@ -27,7 +27,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "3f9866e9-c2b5-4fc3-9fc3-e291deeea9f5",
+          "uuid": "59ba17b6-2a2d-475d-988e-9aa5a1a20d5f",
           "title": "Cadastrar clientes Thunders - Automation Practice",
           "fullFile": "",
           "file": "",
@@ -38,7 +38,7 @@
               "title": "Dado que esteja na página de cadastro do site Automation Practice",
               "fullTitle": "Cadastrar clientes Thunders - Automation Practice Dado que esteja na página de cadastro do site Automation Practice",
               "timedOut": null,
-              "duration": 7039,
+              "duration": 9087,
               "state": "passed",
               "speed": "slow",
               "pass": true,
@@ -47,8 +47,8 @@
               "context": null,
               "code": "cy.visit('http://automationpractice.com/index.php');\ncy.get('.login').click();\ncy.get('#SubmitCreate').should('exist');\ncy.get('#email_create').type(chance.email());\ncy.get('#SubmitCreate').click();\ncy.url().should('contain', 'account-creation');",
               "err": {},
-              "uuid": "28f3cdaf-7924-4389-af2c-dd972ed52897",
-              "parentUUID": "3f9866e9-c2b5-4fc3-9fc3-e291deeea9f5",
+              "uuid": "8b2e25dc-f981-4bb8-90dc-88098ac4f4f1",
+              "parentUUID": "59ba17b6-2a2d-475d-988e-9aa5a1a20d5f",
               "isHook": false,
               "skipped": false
             },
@@ -56,7 +56,7 @@
               "title": "Quando preencher todos os campos obrigatórios e corretamente",
               "fullTitle": "Cadastrar clientes Thunders - Automation Practice Quando preencher todos os campos obrigatórios e corretamente",
               "timedOut": null,
-              "duration": 6530,
+              "duration": 7690,
               "state": "passed",
               "speed": "slow",
               "pass": true,
@@ -65,8 +65,8 @@
               "context": null,
               "code": "cy.get('[type=\"radio\"]').first().check();\ncy.get('input[name=customer_firstname]').type(chance.first());\ncy.get('input[name=customer_lastname]').type(chance.last());\ncy.get('#email').clear();\ncy.get('#email').type(chance.email());\ncy.get('input[name=passwd]').type('12345');\ncy.get('select#days').select('3', {\n  force: true\n});\ncy.get('select#months').select('June', {\n  force: true\n});\ncy.get('select#years').select('1987', {\n  force: true\n});\ncy.get('input[name=company]').type('Samuca LTDA');\ncy.get('input[name=address1]').type(chance.address());\ncy.get('input[name=city]').type(chance.city());\ncy.get('select#id_state').select('Alabama', {\n  force: true\n});\ncy.get('input[name=postcode]').type(chance.zip({\n  plustwo: true\n}));\ncy.get('#other').type('My phone number is +55 11 9.9898.9989');\ncy.get('#phone_mobile').type(chance.phone({\n  country: \"br\",\n  mobile: true\n}));\ncy.get('input[name=alias]').clear();\ncy.get('input[name=alias]').type('example');\ncy.get('#submitAccount').click();",
               "err": {},
-              "uuid": "bca1a93c-2697-4906-bd59-e4dbfef49286",
-              "parentUUID": "3f9866e9-c2b5-4fc3-9fc3-e291deeea9f5",
+              "uuid": "23b124fe-a4db-4e16-b644-015f90400070",
+              "parentUUID": "59ba17b6-2a2d-475d-988e-9aa5a1a20d5f",
               "isHook": false,
               "skipped": false
             },
@@ -74,7 +74,7 @@
               "title": "Então o cadastro deverá ser realizado com sucesso",
               "fullTitle": "Cadastrar clientes Thunders - Automation Practice Então o cadastro deverá ser realizado com sucesso",
               "timedOut": null,
-              "duration": 21,
+              "duration": 23,
               "state": "passed",
               "speed": "fast",
               "pass": true,
@@ -83,22 +83,22 @@
               "context": null,
               "code": "cy.get('.logout').should('exist');",
               "err": {},
-              "uuid": "6de5640d-2ef1-4d42-9de3-0d787b62056d",
-              "parentUUID": "3f9866e9-c2b5-4fc3-9fc3-e291deeea9f5",
+              "uuid": "2aeb95a2-e5a4-4f50-b80a-0df83c1f9886",
+              "parentUUID": "59ba17b6-2a2d-475d-988e-9aa5a1a20d5f",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
           "passes": [
-            "28f3cdaf-7924-4389-af2c-dd972ed52897",
-            "bca1a93c-2697-4906-bd59-e4dbfef49286",
-            "6de5640d-2ef1-4d42-9de3-0d787b62056d"
+            "8b2e25dc-f981-4bb8-90dc-88098ac4f4f1",
+            "23b124fe-a4db-4e16-b644-015f90400070",
+            "2aeb95a2-e5a4-4f50-b80a-0df83c1f9886"
           ],
           "failures": [],
           "pending": [],
           "skipped": [],
-          "duration": 13590,
+          "duration": 16800,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000
